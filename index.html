@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Maina (Mainadev) — Software Engineer & UX/UI Designer</title>
+    <meta name="description" content="Portfolio of William Maina (Mainadev), Software Engineer, Full-Stack Web Developer, and Graphic Designer. Founder of IB Concept Agency.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dropdown-content.open {
+            max-height: 1200px;
+        }
+        /* Expanding witty hover state */
+        .witty-expand {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .witty-expand:hover, .witty-expand:focus-within {
+            transform: scale(1.015) translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Top Navigation / Breadcrumbs -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 lg:px-16 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2 text-sm font-mono text-slate-500">
+            <span>~/mainadev</span>
+            <span class="text-blue-600">/</span>
+            <span class="text-slate-900 font-bold">portfolio</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-600 font-mono hidden sm:inline-block">v2.7 // #dev #mainadev</span>
+        </div>
+
+        <!-- Witty Hamburger Menu Button -->
+        <button id="menu-btn" class="group flex items-center space-x-2 text-xs font-mono uppercase tracking-wider bg-slate-900 text-white px-3.5 py-2 rounded-lg hover:bg-blue-600 transition shadow-sm focus:outline-none cursor-pointer">
+            <span id="menu-text">sudo menu</span>
+            <i class="fa-solid fa-terminal group-hover:rotate-90 transition transform"></i>
+        </button>
+    </header>
+
+    <!-- Overlay / Slide-out Witty Navigation -->
+    <div id="nav-drawer" class="fixed inset-y-0 right-0 z-50 w-full sm:w-80 bg-slate-900 text-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out p-8 flex flex-col justify-between">
+        <div>
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                <span class="font-mono text-xs text-blue-400">// navigation.exe</span>
+                <button id="close-btn" class="text-slate-400 hover:text-white text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul class="space-y-4 font-mono text-sm">
+                <li><a href="#hero" class="nav-link hover:text-blue-400 transition block py-1">01. root_init()</a></li>
+                <li><a href="#projects" class="nav-link hover:text-blue-400 transition block py-1">02. extensive_payloads</a></li>
+                <li><a href="#cv" class="nav-link hover:text-blue-400 transition block py-1">03. bugs_i_fixed (CV)</a></li>
+                <li><a href="#links" class="nav-link hover:text-blue-400 transition block py-1">04. rabbit_holes (Links)</a></li>
+            </ul>
+        </div>
+        <div class="border-t border-slate-800 pt-4 text-xs font-mono text-slate-500">
+            <p>Warning: Staring at code too long causes sudden coffee cravings.</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <main id="hero" class="max-w-5xl mx-auto px-6 lg:px-16 pt-16 pb-24 flex-grow w-full">
+        
+        <!-- Witty Marker Joke -->
+        <div class="mb-8 inline-flex items-center space-x-2 text-xs font-mono text-slate-600 bg-slate-50 px-3.5 py-2 rounded-md border border-slate-200 reveal">
+            <i class="fa-solid fa-terminal text-blue-600"></i>
+            <span>Log #404: Rumor has it bugs fear William after midnight.</span>
+        </div>
+
+        <div class="space-y-8 reveal">
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.08]">
+                William Maina <span class="text-blue-600 font-mono text-3xl sm:text-5xl font-normal block sm:inline mt-2 sm:mt-0">(Mainadev)</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light text-slate-600 max-w-2xl leading-relaxed">
+                Software Engineer, Full-Stack Architect, UX/UI & Graphic Designer. Founder of <strong class="text-slate-900 font-semibold">IB Concept Agency</strong>.
+            </p>
+            <p class="font-mono text-sm text-slate-500 max-w-xl">
+                // Building scalable digital solutions, teaching kids Linux (K–12), and making pixels behave since day one.
+            </p>
+            
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+                <a href="mailto:willima09@gmail.com" class="bg-slate-900 text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-blue-600 transition shadow-md flex items-center space-x-2 cursor-pointer">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://calendly.com/willima09/30min" target="_blank" class="border border-slate-300 font-semibold px-6 py-3 rounded-xl text-sm hover:border-slate-900 transition flex items-center space-x-2 text-slate-900">
+                    <i class="fa-regular fa-calendar text-blue-600"></i>
+                    <span>Book a Coffee Chat</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Witty Inter-Section Joke 1 -->
+        <div class="my-12 font-mono text-xs text-slate-400 bg-slate-50 p-3 rounded border border-slate-100 reveal text-center">
+            <span>$ git status --short &rarr; Working tree clean, but coffee cup dangerously empty.</span>
+        </div>
+
+        <!-- Projects & Repositories Section with Click-to-Reveal Dropdowns -->
+        <section id="projects" class="mt-16 reveal">
+            <div class="border-b border-slate-200 pb-4 mb-8 flex items-baseline justify-between">
+                <h2 class="text-2xl font-extrabold tracking-tight text-slate-900">Featured Projects & Repositories</h2>
+                <span class="font-mono text-xs text-slate-400">click to inspect payloads</span>
+            </div>
+
+            <div class="space-y-4 font-mono">
+                <!-- Dropdown Item 1 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden witty-expand bg-white">
+                    <button class="dropdown-toggle w-full px-6 py-4 text-left flex items-center justify-between bg-slate-50/50 hover:bg-slate-100 transition cursor-pointer">
+                        <span class="font-bold text-slate-900 text-base flex items-center space-x-3">
+                            <span class="text-blue-600 text-xs">01</span>
+                            <span>IB Concept Agency & Enterprise Hubs</span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="dropdown-content px-6 bg-white">
+                        <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
+                            <p>Primary agency deployments handling client deliverables, branding pipelines, and full-stack web solutions across multiple connected emails (<code class="text-xs bg-slate-100 px-1 py-0.5 rounded font-mono text-slate-800">willima09@gmail.com</code>, <code class="text-xs bg-slate-100 px-1 py-0.5 rounded font-mono text-slate-800">ibgroup.live@gmail.com</code>).</p>
+                            <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
+                                <a href="https://ibconcept.xyz" target="_blank" class="text-blue-600 hover:underline">ibconcept.xyz ↗</a>
+                                <a href="https://ibconcept.co.ke" target="_blank" class="text-blue-600 hover:underline">ibconcept.co.ke ↗</a>
+                                <a href="https://ibconcept.github.io/Portifolio-William-Maina-dev/" target="_blank" class="text-blue-600 hover:underline">GitHub Agency Hub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Item 2 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden witty-expand bg-white">
+                    <button class="dropdown-toggle w-full px-6 py-4 text-left flex items-center justify-between bg-slate-50/50 hover:bg-slate-100 transition cursor-pointer">
+                        <span class="font-bold text-slate-900 text-base flex items-center space-x-3">
+                            <span class="text-blue-600 text-xs">02</span>
+                            <span>Interactive Portfolios & Web Deployments</span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="dropdown-content px-6 bg-white">
+                        <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
+                            <p>Extensive showcases of full-stack web applications, UI/UX wireframes, and design systems synced with repositories.</p>
+                            <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
+                                <a href="https://ibconcept.github.io/WilliamMainaPortfolio.github.io/" target="_blank" class="text-blue-600 hover:underline">WilliamMainaPortfolio ↗</a>
+                                <a href="https://willima09.wixsite.com/williammaina" target="_blank" class="text-blue-600 hover:underline">Wix Showcase ↗</a>
+                                <a href="https://williammaina.myportfolio.com/" target="_blank" class="text-blue-600 hover:underline">Adobe Portfolio ↗</a>
+                                <a href="https://stikas.start.page/" target="_blank" class="text-blue-600 hover:underline">Stikas Start Page ↗</a>
+                                <a href="https://g.dev/ibconceptwilliam" target="_blank" class="text-blue-600 hover:underline">Google Dev Profile ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Item 3 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden witty-expand bg-white">
+                    <button class="dropdown-toggle w-full px-6 py-4 text-left flex items-center justify-between bg-slate-50/50 hover:bg-slate-100 transition cursor-pointer">
+                        <span class="font-bold text-slate-900 text-base flex items-center space-x-3">
+                            <span class="text-blue-600 text-xs">03</span>
+                            <span>K-12 Linux Teaching Engine & Educational Repos</span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="dropdown-content px-6 bg-white">
+                        <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
+                            <p>Specialized open-source educational platforms and curriculum notes designed to teach kids Linux from ages K–12, backed by published articles.</p>
+                            <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
+                                <a href="https://medium.com/@williammaina" target="_blank" class="text-blue-600 hover:underline">Medium Articles ↗</a>
+                                <a href="https://devpost.com/willima09" target="_blank" class="text-blue-600 hover:underline">Devpost Submissions ↗</a>
+                                <a href="https://github.com/ibconcept" target="_blank" class="text-blue-600 hover:underline">GitHub Repositories ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Item 4 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden witty-expand bg-white">
+                    <button class="dropdown-toggle w-full px-6 py-4 text-left flex items-center justify-between bg-slate-50/50 hover:bg-slate-100 transition cursor-pointer">
+                        <span class="font-bold text-slate-900 text-base flex items-center space-x-3">
+                            <span class="text-blue-600 text-xs">04</span>
+                            <span>Design Systems, UI Kits & Code Labs</span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="dropdown-content px-6 bg-white">
+                        <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
+                            <p>Vector design systems, graphics galleries, and sandbox repositories managed across platforms.</p>
+                            <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
+                                <a href="https://gitlab.com/infinitiouscomoro" target="_blank" class="text-blue-600 hover:underline">GitLab Repos ↗</a>
+                                <a href="https://g.dev/mainadev" target="_blank" class="text-blue-600 hover:underline">Google DevProfile ↗</a>
+                                <a href="https://www.behance.net/willmaina" target="_blank" class="text-blue-600 hover:underline">Behance Gallery ↗</a>
+                                <a href="https://dribbble.com/mainadev" target="_blank" class="text-blue-600 hover:underline">Dribbble Shots ↗</a>
+                                <a href="https://uplink.weforum.org/uplink/s/profile/005TE00000A7qCEYAZ#profile?profileUpdated" target="_blank" class="text-blue-600 hover:underline">WeForum Uplink ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Witty Inter-Section Joke 2 -->
+        <div class="my-12 font-mono text-xs text-slate-400 bg-slate-50 p-3 rounded border border-slate-100 reveal text-center">
+            <span>$ sudo apt-get install patience &rarr; Error: Package already up to date, try drinking espresso.</span>
+        </div>
+
+        <!-- Witty CV / Resume Section -->
+        <section id="cv" class="mt-16 reveal">
+            <div class="border-b border-slate-200 pb-4 mb-8 flex items-baseline justify-between">
+                <h2 class="text-2xl font-extrabold tracking-tight text-slate-900">Experience & Track Record</h2>
+                <span class="font-mono text-xs text-slate-400">compiled without warnings</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 font-sans">
+                <div class="space-y-6 witty-expand p-4 rounded-xl hover:bg-slate-50/50 transition">
+                    <h3 class="font-mono text-xs text-blue-600 uppercase tracking-widest">// professional_roles.log</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Founder & Lead Engineer</h4>
+                            <p class="text-sm text-slate-600 font-mono">IB Concept Agency • Present</p>
+                            <p class="text-sm text-slate-500 mt-1">Directing full-stack architecture, branding campaigns, and custom web engineering solutions.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Software Engineer & UI/UX Designer</h4>
+                            <p class="text-sm text-slate-600 font-mono">Independent & Freelance • Ongoing</p>
+                            <p class="text-sm text-slate-500 mt-1">Crafting lightning-fast web applications, single-file architectures, and interactive digital experiences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 witty-expand p-4 rounded-xl hover:bg-slate-50/50 transition">
+                    <h3 class="font-mono text-xs text-blue-600 uppercase tracking-widest">// tech_stack.json</h3>
+                    <p class="text-sm text-slate-600">Equipped with modern languages, frameworks, and command-line mastery:</p>
+                    <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs">
+                        <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-800">JavaScript / TS</span>
+                        <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-800">React / Vite</span>
+                        <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-800">Python / Go</span>
+                        <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-800">Supabase / Firebase</span>
+                        <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-800">Linux / Git / Neovim</span>
+                        <span class="px-3 py-1.5 rounded bg-slate-100 text-slate-800">UI/UX & Branding</span>
+                    </div>
+                    <p class="font-mono text-xs text-slate-400 pt-4">* Coffee consumption optimized for peak runtime performance.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer with All Socials (Single Color Icons) -->
+    <footer id="links" class="bg-slate-900 text-slate-300 py-16 px-6 lg:px-16 mt-20">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="space-y-4 md:col-span-2">
+                <span class="font-mono text-xs text-blue-400">// terminal.exit()</span>
+                <h3 class="text-2xl font-bold text-white">Let's build something legendary.</h3>
+                <p class="text-sm text-slate-400 max-w-sm">
+                    Got a project in mind, a bug that needs squashing, or just want to talk tech? Drop a line or connect across the channels.
+                </p>
+                <p class="font-mono text-xs text-slate-500">Email: <a href="mailto:willima09@gmail.com" class="text-blue-400 hover:underline">Email</a></p>
+            </div>
+
+            <div class="space-y-3 font-mono text-xs">
+                <p class="text-white font-bold uppercase tracking-wider mb-2">// code_repositories</p>
+                <ul class="space-y-2 text-slate-400">
+                    <li><a href="https://github.com/ibconcept" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-github text-slate-400 w-4"></i><span>GitHub (ibconcept)</span></a></li>
+                    <li><a href="https://gitlab.com/infinitiouscomoro" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-gitlab text-slate-400 w-4"></i><span>GitLab</span></a></li>
+                    <li><a href="https://devpost.com/willima09" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-solid fa-code text-slate-400 w-4"></i><span>Devpost</span></a></li>
+                    <li><a href="https://g.dev/mainadev" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-google text-slate-400 w-4"></i><span>Google Dev</span></a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3 font-mono text-xs">
+                <p class="text-white font-bold uppercase tracking-wider mb-2">// networks_&_socials</p>
+                <ul class="space-y-2 text-slate-400">
+                    <li><a href="https://www.linkedin.com/in/williammaina/" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-linkedin text-slate-400 w-4"></i><span>LinkedIn</span></a></li>
+                    <li><a href="https://twitter.com/MainahDev" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-twitter text-slate-400 w-4"></i><span>Twitter / X</span></a></li>
+                    <li><a href="https://medium.com/@williammaina" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-medium text-slate-400 w-4"></i><span>Medium Articles</span></a></li>
+                    <li><a href="https://www.youtube.com/@ib_concept" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-youtube text-slate-400 w-4"></i><span>YouTube</span></a></li>
+                    <li><a href="https://www.instagram.com/ib_concept/" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-instagram text-slate-400 w-4"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.tiktok.com/@infinitious_comoro" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-tiktok text-slate-400 w-4"></i><span>TikTok</span></a></li>
+                    <li><a href="https://www.behance.net/willmaina" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-behance text-slate-400 w-4"></i><span>Behance</span></a></li>
+                    <li><a href="https://dribbble.com/mainadev" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-dribbble text-slate-400 w-4"></i><span>Dribbble</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-500">
+            <p>© 2026 William Maina (Mainadev). All rights reserved.</p>
+            <p class="mt-4 sm:mt-0">#mainadev #dev // Crafted with precision & coffee.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Toggle Nav Drawer
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const navDrawer = document.getElementById('nav-drawer');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            if (menuBtn && navDrawer) {
+                menuBtn.addEventListener('click', () => {
+                    navDrawer.classList.remove('translate-x-full');
+                });
+            }
+
+            if (closeBtn && navDrawer) {
+                closeBtn.addEventListener('click', () => {
+                    navDrawer.classList.add('translate-x-full');
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navDrawer.classList.add('translate-x-full');
+                });
+            });
+
+            // Dropdown Accordions
+            const toggles = document.querySelectorAll('.dropdown-toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    
+                    toggles.forEach(t => {
+                        if (t !== toggle) {
+                            t.nextElementSibling.classList.remove('open');
+                            t.querySelector('i').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    content.classList.toggle('open');
+                    if (content.classList.contains('open')) {
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            // Scroll Reveal Animation
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                reveals.forEach(element => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 100;
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+</body>
+</html>
