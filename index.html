@@ -50,7 +50,6 @@
         .dropdown-content.open {
             max-height: 1200px;
         }
-        /* Expanding witty hover state */
         .witty-expand {
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
         }
@@ -71,7 +70,7 @@
         </div>
 
         <!-- Witty Hamburger Menu Button -->
-        <button id="menu-btn" class="group flex items-center space-x-2 text-xs font-mono uppercase tracking-wider bg-slate-900 text-white px-3.5 py-2 rounded-lg hover:bg-blue-600 transition shadow-sm focus:outline-none cursor-pointer">
+        <button id="menu-btn" class="group flex items-center space-x-2 text-xs font-mono uppercase tracking-wider bg-slate-900 text-white px-3.5 py-2 rounded-lg hover:bg-blue-600 transition shadow-sm" aria-label="Open navigation menu">
             <span id="menu-text">sudo menu</span>
             <i class="fa-solid fa-terminal group-hover:rotate-90 transition transform"></i>
         </button>
@@ -82,7 +81,7 @@
         <div>
             <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
                 <span class="font-mono text-xs text-blue-400">// navigation.exe</span>
-                <button id="close-btn" class="text-slate-400 hover:text-white text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+                <button id="close-btn" class="text-slate-400 hover:text-white text-lg cursor-pointer" aria-label="Close navigation menu"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <ul class="space-y-4 font-mono text-sm">
                 <li><a href="#hero" class="nav-link hover:text-blue-400 transition block py-1">01. root_init()</a></li>
@@ -99,7 +98,6 @@
     <!-- Hero Section -->
     <main id="hero" class="max-w-5xl mx-auto px-6 lg:px-16 pt-16 pb-24 flex-grow w-full">
         
-        <!-- Witty Marker Joke -->
         <div class="mb-8 inline-flex items-center space-x-2 text-xs font-mono text-slate-600 bg-slate-50 px-3.5 py-2 rounded-md border border-slate-200 reveal">
             <i class="fa-solid fa-terminal text-blue-600"></i>
             <span>Log #404: Rumor has it bugs fear William after midnight.</span>
@@ -117,18 +115,17 @@
             </p>
             
             <div class="flex flex-wrap items-center gap-4 pt-4">
-                <a href="mailto:willima09@gmail.com" class="bg-slate-900 text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-blue-600 transition shadow-md flex items-center space-x-2 cursor-pointer">
+                <a href="mailto:willima09@gmail.com" class="bg-slate-900 text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-blue-600 transition shadow-md flex items-center space-x-2">
                     <i class="fa-solid fa-paper-plane text-xs"></i>
                     <span>Email</span>
                 </a>
-                <a href="https://calendly.com/willima09/30min" target="_blank" class="border border-slate-300 font-semibold px-6 py-3 rounded-xl text-sm hover:border-slate-900 transition flex items-center space-x-2 text-slate-900">
+                <a href="https://calendly.com/willima09/30min" target="_blank" rel="noopener noreferrer" class="border border-slate-300 font-semibold px-6 py-3 rounded-xl text-sm hover:border-slate-900 transition flex items-center space-x-2">
                     <i class="fa-regular fa-calendar text-blue-600"></i>
                     <span>Book a Coffee Chat</span>
                 </a>
             </div>
         </div>
 
-        <!-- Witty Inter-Section Joke 1 -->
         <div class="my-12 font-mono text-xs text-slate-400 bg-slate-50 p-3 rounded border border-slate-100 reveal text-center">
             <span>$ git status --short &rarr; Working tree clean, but coffee cup dangerously empty.</span>
         </div>
@@ -152,11 +149,11 @@
                     </button>
                     <div class="dropdown-content px-6 bg-white">
                         <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
-                            <p>Primary agency deployments handling client deliverables, branding pipelines, and full-stack web solutions across multiple connected emails (<code class="text-xs bg-slate-100 px-1 py-0.5 rounded font-mono text-slate-800">willima09@gmail.com</code>, <code class="text-xs bg-slate-100 px-1 py-0.5 rounded font-mono text-slate-800">ibgroup.live@gmail.com</code>).</p>
+                            <p>Primary agency deployments handling client deliverables, branding pipelines, and full-stack web solutions across multiple connected emails.</p>
                             <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
-                                <a href="https://ibconcept.xyz" target="_blank" class="text-blue-600 hover:underline">ibconcept.xyz ↗</a>
-                                <a href="https://ibconcept.co.ke" target="_blank" class="text-blue-600 hover:underline">ibconcept.co.ke ↗</a>
-                                <a href="https://ibconcept.github.io/Portifolio-William-Maina-dev/" target="_blank" class="text-blue-600 hover:underline">GitHub Agency Hub ↗</a>
+                                <a href="https://ibconcept.xyz" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">ibconcept.xyz ↗</a>
+                                <a href="https://ibconcept.co.ke" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">ibconcept.co.ke ↗</a>
+                                <a href="https://ibconcept.github.io/Portifolio-William-Maina-dev/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">GitHub Agency Hub ↗</a>
                             </div>
                         </div>
                     </div>
@@ -175,11 +172,11 @@
                         <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
                             <p>Extensive showcases of full-stack web applications, UI/UX wireframes, and design systems synced with repositories.</p>
                             <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
-                                <a href="https://ibconcept.github.io/WilliamMainaPortfolio.github.io/" target="_blank" class="text-blue-600 hover:underline">WilliamMainaPortfolio ↗</a>
-                                <a href="https://willima09.wixsite.com/williammaina" target="_blank" class="text-blue-600 hover:underline">Wix Showcase ↗</a>
-                                <a href="https://williammaina.myportfolio.com/" target="_blank" class="text-blue-600 hover:underline">Adobe Portfolio ↗</a>
-                                <a href="https://stikas.start.page/" target="_blank" class="text-blue-600 hover:underline">Stikas Start Page ↗</a>
-                                <a href="https://g.dev/ibconceptwilliam" target="_blank" class="text-blue-600 hover:underline">Google Dev Profile ↗</a>
+                                <a href="https://ibconcept.github.io/WilliamMainaPortfolio.github.io/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">WilliamMainaPortfolio ↗</a>
+                                <a href="https://willima09.wixsite.com/williammaina" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Wix Showcase ↗</a>
+                                <a href="https://williammaina.myportfolio.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Adobe Portfolio ↗</a>
+                                <a href="https://stikas.start.page/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Stikas Start Page ↗</a>
+                                <a href="https://g.dev/ibconceptwilliam" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Google Dev Profile ↗</a>
                             </div>
                         </div>
                     </div>
@@ -198,9 +195,9 @@
                         <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
                             <p>Specialized open-source educational platforms and curriculum notes designed to teach kids Linux from ages K–12, backed by published articles.</p>
                             <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
-                                <a href="https://medium.com/@williammaina" target="_blank" class="text-blue-600 hover:underline">Medium Articles ↗</a>
-                                <a href="https://devpost.com/willima09" target="_blank" class="text-blue-600 hover:underline">Devpost Submissions ↗</a>
-                                <a href="https://github.com/ibconcept" target="_blank" class="text-blue-600 hover:underline">GitHub Repositories ↗</a>
+                                <a href="https://medium.com/@williammaina" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Medium Articles ↗</a>
+                                <a href="https://devpost.com/willima09" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Devpost Submissions ↗</a>
+                                <a href="https://github.com/ibconcept" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">GitHub Repositories ↗</a>
                             </div>
                         </div>
                     </div>
@@ -219,11 +216,12 @@
                         <div class="py-4 space-y-3 text-sm text-slate-600 font-sans border-t border-slate-100">
                             <p>Vector design systems, graphics galleries, and sandbox repositories managed across platforms.</p>
                             <div class="flex flex-wrap gap-4 pt-2 font-mono text-xs">
-                                <a href="https://gitlab.com/infinitiouscomoro" target="_blank" class="text-blue-600 hover:underline">GitLab Repos ↗</a>
-                                <a href="https://g.dev/mainadev" target="_blank" class="text-blue-600 hover:underline">Google DevProfile ↗</a>
-                                <a href="https://www.behance.net/willmaina" target="_blank" class="text-blue-600 hover:underline">Behance Gallery ↗</a>
-                                <a href="https://dribbble.com/mainadev" target="_blank" class="text-blue-600 hover:underline">Dribbble Shots ↗</a>
-                                <a href="https://uplink.weforum.org/uplink/s/profile/005TE00000A7qCEYAZ#profile?profileUpdated" target="_blank" class="text-blue-600 hover:underline">WeForum Uplink ↗</a>
+                                <a href="https://gitlab.com/infinitiouscomoro" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">GitLab Repos ↗</a>
+                                <a href="https://g.dev/mainadev" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Google DevProfile ↗</a>
+                                <a href="https://www.behance.net/willmaina" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Behance Gallery ↗</a>
+                                <a href="https://dribbble.com/mainadev" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Dribbble Shots ↗</a>
+                                <a href="https://uplink.weforum.org/uplink/s/profile/005TE00000A7qCEYAZ#profile?profileUpdated" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">WeForum Uplink ↗</a>
+                                <a href="https://www.credly.com/users/william-maina.6cac3f0b" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Credly Badges ↗</a>
                             </div>
                         </div>
                     </div>
@@ -231,7 +229,6 @@
             </div>
         </section>
 
-        <!-- Witty Inter-Section Joke 2 -->
         <div class="my-12 font-mono text-xs text-slate-400 bg-slate-50 p-3 rounded border border-slate-100 reveal text-center">
             <span>$ sudo apt-get install patience &rarr; Error: Package already up to date, try drinking espresso.</span>
         </div>
@@ -293,24 +290,25 @@
             <div class="space-y-3 font-mono text-xs">
                 <p class="text-white font-bold uppercase tracking-wider mb-2">// code_repositories</p>
                 <ul class="space-y-2 text-slate-400">
-                    <li><a href="https://github.com/ibconcept" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-github text-slate-400 w-4"></i><span>GitHub (ibconcept)</span></a></li>
-                    <li><a href="https://gitlab.com/infinitiouscomoro" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-gitlab text-slate-400 w-4"></i><span>GitLab</span></a></li>
-                    <li><a href="https://devpost.com/willima09" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-solid fa-code text-slate-400 w-4"></i><span>Devpost</span></a></li>
-                    <li><a href="https://g.dev/mainadev" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-google text-slate-400 w-4"></i><span>Google Dev</span></a></li>
+                    <li><a href="https://github.com/ibconcept" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-github text-slate-400 w-4"></i><span>GitHub</span></a></li>
+                    <li><a href="https://gitlab.com/infinitiouscomoro" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-gitlab text-slate-400 w-4"></i><span>GitLab</span></a></li>
+                    <li><a href="https://devpost.com/willima09" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-solid fa-code text-slate-400 w-4"></i><span>Devpost</span></a></li>
+                    <li><a href="https://g.dev/mainadev" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-google text-slate-400 w-4"></i><span>Google Developer</span></a></li>
                 </ul>
             </div>
 
             <div class="space-y-3 font-mono text-xs">
                 <p class="text-white font-bold uppercase tracking-wider mb-2">// networks_&_socials</p>
                 <ul class="space-y-2 text-slate-400">
-                    <li><a href="https://www.linkedin.com/in/williammaina/" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-linkedin text-slate-400 w-4"></i><span>LinkedIn</span></a></li>
-                    <li><a href="https://twitter.com/MainahDev" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-twitter text-slate-400 w-4"></i><span>Twitter / X</span></a></li>
-                    <li><a href="https://medium.com/@williammaina" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-medium text-slate-400 w-4"></i><span>Medium Articles</span></a></li>
-                    <li><a href="https://www.youtube.com/@ib_concept" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-youtube text-slate-400 w-4"></i><span>YouTube</span></a></li>
-                    <li><a href="https://www.instagram.com/ib_concept/" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-instagram text-slate-400 w-4"></i><span>Instagram</span></a></li>
-                    <li><a href="https://www.tiktok.com/@infinitious_comoro" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-tiktok text-slate-400 w-4"></i><span>TikTok</span></a></li>
-                    <li><a href="https://www.behance.net/willmaina" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-behance text-slate-400 w-4"></i><span>Behance</span></a></li>
-                    <li><a href="https://dribbble.com/mainadev" target="_blank" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-dribbble text-slate-400 w-4"></i><span>Dribbble</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/williammaina/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-linkedin text-slate-400 w-4"></i><span>LinkedIn</span></a></li>
+                    <li><a href="https://twitter.com/MainahDev" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-twitter text-slate-400 w-4"></i><span>Twitter / X</span></a></li>
+                    <li><a href="https://medium.com/@williammaina" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-medium text-slate-400 w-4"></i><span>Medium</span></a></li>
+                    <li><a href="https://www.youtube.com/@ib_concept" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-youtube text-slate-400 w-4"></i><span>YouTube</span></a></li>
+                    <li><a href="https://www.instagram.com/ib_concept/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-instagram text-slate-400 w-4"></i><span>Instagram</span></a></li>
+                    <li><a href="https://www.tiktok.com/@infinitious_comoro" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-tiktok text-slate-400 w-4"></i><span>TikTok</span></a></li>
+                    <li><a href="https://www.behance.net/willmaina" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-behance text-slate-400 w-4"></i><span>Behance</span></a></li>
+                    <li><a href="https://dribbble.com/mainadev" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-brands fa-dribbble text-slate-400 w-4"></i><span>Dribbble</span></a></li>
+                    <li><a href="https://www.credly.com/users/william-maina.6cac3f0b" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center space-x-2"><i class="fa-solid fa-award text-slate-400 w-4"></i><span>Credly</span></a></li>
                 </ul>
             </div>
         </div>
@@ -324,31 +322,23 @@
     <!-- Interactive JS Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Toggle Nav Drawer
             const menuBtn = document.getElementById('menu-btn');
             const closeBtn = document.getElementById('close-btn');
             const navDrawer = document.getElementById('nav-drawer');
             const navLinks = document.querySelectorAll('.nav-link');
 
             if (menuBtn && navDrawer) {
-                menuBtn.addEventListener('click', () => {
-                    navDrawer.classList.remove('translate-x-full');
-                });
+                menuBtn.addEventListener('click', () => navDrawer.classList.remove('translate-x-full'));
             }
 
             if (closeBtn && navDrawer) {
-                closeBtn.addEventListener('click', () => {
-                    navDrawer.classList.add('translate-x-full');
-                });
+                closeBtn.addEventListener('click', () => navDrawer.classList.add('translate-x-full'));
             }
 
             navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navDrawer.classList.add('translate-x-full');
-                });
+                link.addEventListener('click', () => navDrawer.classList.add('translate-x-full'));
             });
 
-            // Dropdown Accordions
             const toggles = document.querySelectorAll('.dropdown-toggle');
             toggles.forEach(toggle => {
                 toggle.addEventListener('click', () => {
@@ -363,22 +353,15 @@
                     });
 
                     content.classList.toggle('open');
-                    if (content.classList.contains('open')) {
-                        icon.style.transform = 'rotate(180deg)';
-                    } else {
-                        icon.style.transform = 'rotate(0deg)';
-                    }
+                    icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
                 });
             });
 
-            // Scroll Reveal Animation
             const reveals = document.querySelectorAll('.reveal');
             const revealOnScroll = () => {
                 reveals.forEach(element => {
-                    const windowHeight = window.innerHeight;
                     const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 100;
-                    if (elementTop < windowHeight - elementVisible) {
+                    if (elementTop < window.innerHeight - 100) {
                         element.classList.add('active');
                     }
                 });
